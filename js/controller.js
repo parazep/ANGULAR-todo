@@ -32,6 +32,7 @@ angular.module('RouteControllers', [])
                 UserAPIService.callAPI(URL + "accounts/register/", $scope.registrationUser).then(function(results) {
                     $scope.data = results.data;
                     alert("You have successfully registered to Angular Todo");
+                    $scope.login();
                 }).catch(function(err) {
                     alert("Registration failed, please try again with another username!");
                     console.log(err);
